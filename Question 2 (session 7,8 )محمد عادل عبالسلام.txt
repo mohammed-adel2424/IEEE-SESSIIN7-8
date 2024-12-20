@@ -1,0 +1,55 @@
+#include <iostream>
+using namespace std;
+
+
+int main() {
+    // Step 1: Define the number of rows and columns and store them in variables
+    const int rows = 3;
+    const int columns = 3;
+    int matrix[rows][columns];
+
+
+    // Step 2: Take the values of the matrix from the user
+    cout << "Enter values for a " << rows << "x" << columns << " matrix:" << endl;
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < columns; j++) {
+            cin >> matrix[i][j];
+        }
+    }
+
+
+    // Step 3: Print the values of the matrix with space between each element and new line after each row
+    cout << "Matrix elements:" << endl;
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < columns; j++) {
+            cout << matrix[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+
+    // Step 4: Calculate and print the summation of each row of the matrix
+    cout << "Sum of each row:" << endl;
+    for (int i = 0; i < rows; i++) {
+        int sum = 0;
+        for (int j = 0; j < columns; j++) {
+            sum += matrix[i][j];
+        }
+        cout << "Row " << i + 1 << ": " << sum << endl;
+    }
+
+
+    // Step 5: Calculate and print the product of each row of the matrix
+    cout << "Product of each row:" << endl;
+    for (int i = 0; i < rows; i++) {
+        int product = 1;
+        for (int j = 0; j < columns; j++) {
+            product *= matrix[i][j];
+        }
+        cout << "Row " << i + 1 << ": " << product << endl;
+    }
+
+
+    return 0;
+}
+
